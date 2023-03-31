@@ -23,10 +23,6 @@ public class MailDTO implements Serializable {
 
 	Map<String, Object> properties;
 
-	public MailDTO() {
-
-	}
-
 	public String getFrom() {
 		return from;
 	}
