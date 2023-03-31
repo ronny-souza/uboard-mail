@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Bem-vindo(a)!</title>
+
+	<style type="text/css">
+		body {
+			font-family: "Helvetica", sans-serif;
+			color: #191414;
+		}
+
+		p {
+			font-size: 18px;
+		}
+
+		.orange-text {
+			color: #FE6C38;
+		}
+
+		.gray-text {
+			color: #d9d9d9;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.weight-700 {
+			font-weight: 700;
+		}
+
+		.card {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.card-body {
+			background-color: #eff3ff;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			padding: 16px;
+			text-align: center;
+		}
+
+		.card-section {
+			padding: 0.3em 1em;
+			width: 80%;
+			text-align: left;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.p-header {
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		.p-small {
+			font-size: 15px;
+		}
+
+		.fs-30 {
+			font-size: 30px;
+		}
+
+		.fs-40 {
+			font-size: 40px;
+		}
+
+		.mt-5 {
+			margin-top: 5%;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<div>
+			<h1 class="orange-text text-center fs-40">uBoard</h1>
+		</div>
+	</header>
+	<section>
+		<div class="card-section">
+			<div class="header-detail">
+				<p class="p-header">Bem-vindo(a), <span th:text="${username}"></span>!</p>
+			</div>
+			<p>Obrigado por nos escolher! Para confirmar sua conta e começar a utilizá-la, basta digitar o código abaixo
+				em seu app. Pedimos atenção pois <b>o código expira em 24h</b></p>
+
+			<div class="card">
+				<div class="card-body">
+					<h1 class="text-center fs-30" th:text="${confirmationCode}"></h1>
+				</div>
+			</div>
+			<p class="p-small mt-5">&copy; <span th:text="${currentYear}"></span> uBoard Metrics.</p>
+		</div>
+	</section>
+</body>
+
+</html>
