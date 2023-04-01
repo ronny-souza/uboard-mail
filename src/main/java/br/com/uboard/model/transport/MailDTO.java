@@ -1,4 +1,4 @@
-package br.com.uboard.model;
+package br.com.uboard.model.transport;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -11,13 +11,15 @@ public class MailDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	@NotBlank(message = "The sender is required for sending email")
 	@Email
 	private String from;
 
 	@NotBlank(message = "Recipient is required for sending email")
 	@Email
 	private String to;
+
+	@NotBlank(message = "Subject is required for sending email")
+	private String subject;
 
 	private MailTypeEnum mailType;
 
@@ -37,6 +39,14 @@ public class MailDTO implements Serializable {
 
 	public void setTo(String to) {
 		this.to = to;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 
 	public MailTypeEnum getMailType() {

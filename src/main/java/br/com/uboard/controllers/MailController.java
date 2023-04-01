@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.uboard.model.MailDTO;
+import br.com.uboard.model.transport.MailDTO;
 import br.com.uboard.services.MailService;
 import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
